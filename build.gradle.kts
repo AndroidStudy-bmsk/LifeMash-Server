@@ -1,21 +1,11 @@
 plugins {
-    kotlin("jvm") version "2.0.0"
+    alias(libs.plugins.kotlin.jvm) apply false
+    alias(libs.plugins.kotlinSerialization) apply false
 }
 
-group = "org.bmsk"
-version = "1.0-SNAPSHOT"
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    testImplementation(kotlin("test"))
-}
-
-tasks.test {
-    useJUnitPlatform()
-}
-kotlin {
-    jvmToolchain(17)
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
 }
