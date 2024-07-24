@@ -1,4 +1,4 @@
-package org.bmsk.lifemash.repo.db.api
+package org.bmsk.lifemash.repo.db
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 

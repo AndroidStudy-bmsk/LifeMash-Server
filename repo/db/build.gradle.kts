@@ -1,9 +1,11 @@
 plugins {
-    kotlin("jvm")
-    id("kotlinx-serialization")
+    alias(libs.plugins.springBoot)
+    alias(libs.plugins.springDependencyManagement)
+    alias(libs.plugins.kotlinJvm)
+    alias(libs.plugins.kotlinSpring)
 }
 
-group = "org.bmsk.lifemash.repo.db.impl"
+group = "org.bmsk.lifemash.repo.db"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -11,8 +13,6 @@ repositories {
 }
 
 dependencies {
-    implementation(projects.repo.db.api)
-
     testImplementation(kotlin("test"))
 
     implementation(libs.kotlin.stdlib)
@@ -27,6 +27,12 @@ dependencies {
     implementation(libs.exposed.jdbc)
     implementation(libs.sqlite.jdbc)
     implementation(libs.postgresql)
+
+    implementation(libs.springBootStarter)
+    implementation(libs.kotlinReflect)
+    testImplementation(libs.springBootStarterTest)
+    testImplementation(libs.kotlinTestJunit5)
+    testRuntimeOnly(libs.junitPlatformLauncher)
 }
 
 tasks.test {

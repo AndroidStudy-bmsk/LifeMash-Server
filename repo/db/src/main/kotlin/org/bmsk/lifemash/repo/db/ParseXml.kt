@@ -1,10 +1,8 @@
-package org.bmsk.lifemash.repo.db.impl
+package org.bmsk.lifemash.repo.db
 
 import com.fasterxml.jackson.dataformat.xml.XmlMapper
 import com.fasterxml.jackson.module.kotlin.KotlinModule
 import com.fasterxml.jackson.module.kotlin.readValue
-import org.bmsk.lifemash.repo.db.api.Item
-import org.bmsk.lifemash.repo.db.api.Rss
 
 fun encodeXmlEntities(xml: String): String {
     return xml.replace("&", "&amp;")

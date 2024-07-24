@@ -1,6 +1,5 @@
-package org.bmsk.lifemash.repo.db.impl
+package org.bmsk.lifemash.repo.db
 
-import org.bmsk.lifemash.repo.db.api.Item
 import org.jetbrains.exposed.sql.SchemaUtils.create
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.Table

@@ -1,9 +1,9 @@
 package org.bmsk.lifemash.app
 
-import org.bmsk.lifemash.repo.db.impl.encodeXmlEntities
-import org.bmsk.lifemash.repo.db.impl.initDatabase
-import org.bmsk.lifemash.repo.db.impl.parseXml
-import org.bmsk.lifemash.repo.db.impl.saveItemsToDatabase
+import org.bmsk.lifemash.repo.db.encodeXmlEntities
+import org.bmsk.lifemash.repo.db.initDatabase
+import org.bmsk.lifemash.repo.db.parseXml
+import org.bmsk.lifemash.repo.db.saveItemsToDatabase
 
 fun main() {
     // XML 응답 문자열 (예제)

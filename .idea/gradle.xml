@@ -24,8 +24,6 @@
             <option value="$PROJECT_DIR$/build-logic" />
             <option value="$PROJECT_DIR$/repo" />
             <option value="$PROJECT_DIR$/repo/db" />
-            <option value="$PROJECT_DIR$/repo/db/api" />
-            <option value="$PROJECT_DIR$/repo/db/impl" />
           </set>
         </option>
       </GradleProjectSettings>

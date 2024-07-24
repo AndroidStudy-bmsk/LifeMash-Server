@@ -1,5 +1,9 @@
 [versions]
 kotlin = "2.0.0"
+
+springBoot = "3.3.2"
+springDependencyManagement = "1.1.6"
+
 jackson = "2.13.4"
 serialization = "1.3.2"
 okhttp = "4.9.3"
@@ -9,6 +13,12 @@ sqlite = "3.41.2.2"
 postgres = "42.7.2"
 
 [libraries]
+springBootStarter = { group = "org.springframework.boot", name = "spring-boot-starter" }
+kotlinReflect = { group = "org.jetbrains.kotlin", name = "kotlin-reflect" }
+springBootStarterTest = { group = "org.springframework.boot", name = "spring-boot-starter-test" }
+kotlinTestJunit5 = { group = "org.jetbrains.kotlin", name = "kotlin-test-junit5" }
+junitPlatformLauncher = { group = "org.junit.platform", name = "junit-platform-launcher" }
+
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
 kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "serialization" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
@@ -25,5 +35,8 @@ sqlite-jdbc = { module = "org.xerial:sqlite-jdbc", version.ref = "sqlite" }
 postgresql = { module = "org.postgresql:postgresql", version.ref = "postgres" }
 
 [plugins]
-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+springBoot = { id = "org.springframework.boot", version.ref = "springBoot" }
+springDependencyManagement = { id = "io.spring.dependency-management", version.ref = "springDependencyManagement" }
+kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlinSpring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
 kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }

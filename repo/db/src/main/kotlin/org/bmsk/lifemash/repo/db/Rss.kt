@@ -1,7 +1,7 @@
-package org.bmsk.lifemash.repo.db.api
+package org.bmsk.lifemash.repo.db
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
-import kotlinx.serialization.Serializable
+import org.bmsk.lifemash.repo.db.Channel
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class Rss(

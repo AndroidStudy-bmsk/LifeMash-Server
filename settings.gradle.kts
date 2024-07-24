@@ -9,6 +9,5 @@ plugins {
 rootProject.name = "LifeMash-Server"
 include(
     "app",
-    ":repo:db:impl",
-    ":repo:db:api",
+    ":repo:db"
 )
