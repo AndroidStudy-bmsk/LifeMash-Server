@@ -1,8 +1,8 @@
 plugins {
-    alias(libs.plugins.springBoot)
-    alias(libs.plugins.springDependencyManagement)
-    alias(libs.plugins.kotlinJvm)
-    alias(libs.plugins.kotlinSpring)
+    alias(libs.plugins.spring.boot)
+    alias(libs.plugins.spring.dependency.management)
+    alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.kotlin.spring)
 }
 
 group = "org.bmsk.lifemash.app"
@@ -15,11 +15,11 @@ repositories {
 dependencies {
     implementation(projects.repo.db)
 
-    implementation(libs.springBootStarter)
-    implementation(libs.kotlinReflect)
-    testImplementation(libs.springBootStarterTest)
-    testImplementation(libs.kotlinTestJunit5)
-    testRuntimeOnly(libs.junitPlatformLauncher)
+    implementation(libs.spring.boot.starter)
+    implementation(libs.kotlin.reflect)
+    testImplementation(libs.spring.boot.starter.test)
+    testImplementation(libs.kotlin.test.junit5)
+    testRuntimeOnly(libs.junit.platform.launcher)
 }
 
 tasks.test {
