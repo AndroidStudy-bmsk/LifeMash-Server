@@ -11,4 +11,9 @@ class ArticleService(
     fun getArticlesBySection(section: String): List<Article> {
         return articleRepository.findBySection(section)
     }
+
+    // 모든 아티클을 가져오는 메서드 추가
+    fun getAllArticles(): List<Article> {
+        return articleRepository.findAll()
+    }
 }
